@@ -1,0 +1,258 @@
+@import "tailwindcss";
+
+/* ─── CoFo Raffine Font ─────────────────────────────────────────── */
+@font-face {
+  font-family: "CoFo Raffine";
+  src: url("https://fonts.cdnfonts.com/css/cofo-raffine") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── Design Tokens ─────────────────────────────────────────────── */
+:root {
+  /* Brand Colors */
+  --cream: #F7F3EE;
+  --cream-dark: #EDE7DC;
+  --charcoal: #1A1A1A;
+  --charcoal-light: #2D2D2D;
+  --gold: #C4943A;
+  --gold-light: #D4AA5C;
+  --muted: #7A7065;
+  --muted-light: #A89E93;
+  --white: #FFFFFF;
+  --black: #0A0A0A;
+  --border: #E8E1D7;
+  --border-dark: #3A3530;
+
+  /* Surface */
+  --bg-primary: var(--white);
+  --bg-secondary: var(--cream);
+  --bg-tertiary: var(--cream-dark);
+
+  /* Text */
+  --text-primary: var(--charcoal);
+  --text-secondary: var(--muted);
+  --text-inverse: var(--white);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(26,26,26,0.08);
+  --shadow-md: 0 4px 16px rgba(26,26,26,0.10);
+  --shadow-lg: 0 12px 40px rgba(26,26,26,0.14);
+  --shadow-xl: 0 24px 64px rgba(26,26,26,0.18);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* ─── Base Resets ───────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "CoFo Raffine", Georgia, "Times New Roman", serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ─── Typography ────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "CoFo Raffine", Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+/* ─── Tailwind v4 Theme Extension ───────────────────────────────── */
+@theme inline {
+  --color-cream: var(--cream);
+  --color-cream-dark: var(--cream-dark);
+  --color-charcoal: var(--charcoal);
+  --color-charcoal-light: var(--charcoal-light);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-muted: var(--muted);
+  --color-muted-light: var(--muted-light);
+  --color-border: var(--border);
+  --font-raffine: "CoFo Raffine", Georgia, serif;
+}
+
+/* ─── Scrollbar ─────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--muted-light); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--muted); }
+
+/* ─── Selection ─────────────────────────────────────────────────── */
+::selection { background: var(--gold); color: var(--white); }
+
+/* ─── Focus Ring ────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ─── Custom Animations / Keyframes ─────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideRight {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ─── Utility Classes ───────────────────────────────────────────── */
+.animate-fade-up    { animation: fadeUp 0.6s var(--ease-out) both; }
+.animate-fade-in    { animation: fadeIn 0.4s ease both; }
+.animate-scale-in   { animation: scaleIn 0.35s var(--ease-out) both; }
+.animate-marquee    { animation: marquee 28s linear infinite; }
+
+.skeleton {
+  background: linear-gradient(90deg, var(--cream) 25%, var(--cream-dark) 50%, var(--cream) 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.6s infinite;
+}
+
+/* ─── Product Card Hover ─────────────────────────────────────────── */
+.product-card-img {
+  transition: transform 0.6s var(--ease-out);
+}
+.product-card:hover .product-card-img {
+  transform: scale(1.06);
+}
+.product-card-overlay {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.product-card:hover .product-card-overlay {
+  opacity: 1;
+}
+
+/* ─── Nav Link Underline ─────────────────────────────────────────── */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 0; height: 1px;
+  background: var(--charcoal);
+  transition: width 0.25s var(--ease-out);
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* ─── Input Base ─────────────────────────────────────────────────── */
+.input-base {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  background: transparent;
+  font-family: "CoFo Raffine", serif;
+  font-size: 0.9375rem;
+  color: var(--charcoal);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  outline: none;
+}
+.input-base:focus {
+  border-color: var(--charcoal);
+  box-shadow: 0 0 0 3px rgba(26,26,26,0.06);
+}
+.input-base::placeholder { color: var(--muted-light); }
+
+/* ─── Button Base ────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: "CoFo Raffine", serif;
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s var(--ease-out);
+  border: none;
+  text-decoration: none;
+}
+.btn-primary {
+  background: var(--charcoal);
+  color: var(--white);
+  padding: 0.875rem 2rem;
+}
+.btn-primary:hover {
+  background: var(--charcoal-light);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--charcoal);
+  padding: 0.875rem 2rem;
+  border: 1px solid var(--charcoal);
+}
+.btn-secondary:hover {
+  background: var(--charcoal);
+  color: var(--white);
+}
+.btn-gold {
+  background: var(--gold);
+  color: var(--white);
+  padding: 0.875rem 2rem;
+}
+.btn-gold:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ─── Section Spacing ────────────────────────────────────────────── */
+.section { padding: 6rem 0; }
+.section-sm { padding: 4rem 0; }
+.container-xl { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+.container-lg { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+@media (max-width: 768px) {
+  .section { padding: 4rem 0; }
+  .section-sm { padding: 2.5rem 0; }
+  .container-xl, .container-lg { padding: 0 1.25rem; }
+}
