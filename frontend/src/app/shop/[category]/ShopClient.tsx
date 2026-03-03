@@ -20,7 +20,7 @@ const SORT_OPTIONS: { value: SortOption; label: string }[] = [
     { value: "bestseller", label: "Best Sellers" },
 ];
 
-const SIZES = ["XS", "S", "M", "L", "XL", "XXL", "One Size"];
+const SIZES = ["XS", "S", "M", "L", "XL", "XXL", "One Size", "Free Size"];
 const PRICE_RANGES: [number, number, string][] = [
     [0, 100, "Under ₹100"],
     [100, 300, "₹100 – ₹300"],

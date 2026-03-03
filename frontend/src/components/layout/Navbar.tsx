@@ -19,42 +19,54 @@ import SearchModal from "./SearchModal";
 
 const NAV_LINKS = [
     {
-        label: "Women",
-        href: "/shop/women",
+        label: "Sarees",
+        href: "/shop/sarees",
         mega: [
-            { label: "All Women", href: "/shop/women" },
-            { label: "Dresses", href: "/shop/women?sub=dresses" },
-            { label: "Knitwear", href: "/shop/women?sub=knitwear" },
-            { label: "Jackets", href: "/shop/women?sub=jackets" },
-            { label: "Trousers", href: "/shop/women?sub=trousers" },
-            { label: "Skirts", href: "/shop/women?sub=skirts" },
+            { label: "All Sarees", href: "/shop/sarees" },
+            { label: "Banarasi Silk", href: "/shop/sarees?sub=banarasi" },
+            { label: "Chanderi", href: "/shop/sarees?sub=chanderi" },
+            { label: "Kanjeevaram", href: "/shop/sarees?sub=kanjeevaram" },
+            { label: "Party Wear", href: "/shop/sarees?sub=party" },
         ],
     },
     {
-        label: "Men",
-        href: "/shop/men",
+        label: "Lehengas",
+        href: "/shop/lehengas",
         mega: [
-            { label: "All Men", href: "/shop/men" },
-            { label: "Knitwear", href: "/shop/men?sub=knitwear" },
-            { label: "Shirts", href: "/shop/men?sub=shirts" },
-            { label: "Trousers", href: "/shop/men?sub=trousers" },
-            { label: "Outerwear", href: "/shop/men?sub=outerwear" },
-            { label: "Jeans", href: "/shop/men?sub=jeans" },
+            { label: "All Lehengas", href: "/shop/lehengas" },
+            { label: "Bridal", href: "/shop/lehengas?sub=bridal" },
+            { label: "Reception", href: "/shop/lehengas?sub=reception" },
+            { label: "Party Wear", href: "/shop/lehengas?sub=party" },
         ],
     },
     {
-        label: "Kids",
-        href: "/shop/kids",
-        mega: [],
+        label: "Suits",
+        href: "/shop/suits",
+        mega: [
+            { label: "All Suits", href: "/shop/suits" },
+            { label: "Anarkalis", href: "/shop/suits?sub=anarkali" },
+            { label: "Sharara Sets", href: "/shop/suits?sub=sharara" },
+            { label: "Salwar Suits", href: "/shop/suits?sub=salwar" },
+        ],
+    },
+    {
+        label: "Kurtas",
+        href: "/shop/kurtas",
+        mega: [
+            { label: "All Kurtas", href: "/shop/kurtas" },
+            { label: "Chikankari", href: "/shop/kurtas?sub=chikankari" },
+            { label: "Cotton", href: "/shop/kurtas?sub=cotton" },
+            { label: "Tunics", href: "/shop/kurtas?sub=tunics" },
+        ],
     },
     {
         label: "Accessories",
         href: "/shop/accessories",
         mega: [
             { label: "All Accessories", href: "/shop/accessories" },
+            { label: "Jewelry", href: "/shop/accessories?sub=jewelry" },
             { label: "Bags", href: "/shop/accessories?sub=bags" },
-            { label: "Scarves", href: "/shop/accessories?sub=scarves" },
-            { label: "Hats", href: "/shop/accessories?sub=hats" },
+            { label: "Dupattas", href: "/shop/accessories?sub=dupattas" },
         ],
     },
     { label: "Sale", href: "/shop/sale", mega: [] },
@@ -91,8 +103,8 @@ export default function Navbar() {
         <>
             <header
                 className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${scrolled
-                        ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-[var(--border)]"
-                        : "bg-white/80 backdrop-blur-sm"
+                    ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-[var(--border)]"
+                    : "bg-white/80 backdrop-blur-sm"
                     }`}
             >
                 {/* Promo strip */}

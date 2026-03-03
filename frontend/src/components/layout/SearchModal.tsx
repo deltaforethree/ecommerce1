@@ -138,7 +138,7 @@ export default function SearchModal({ open, onClose }: SearchModalProps) {
                             <div className="px-5 py-5">
                                 <p className="text-xs text-[var(--muted)] tracking-widest uppercase mb-3">Trending Searches</p>
                                 <div className="flex flex-wrap gap-2">
-                                    {["Cashmere", "Silk Dress", "Linen", "Wool Coat", "Accessories"].map((term) => (
+                                    {["Banarasi Saree", "Bridal Lehenga", "Anarkali Suit", "Chikankari Kurta", "Jewelry"].map((term) => (
                                         <button
                                             key={term}
                                             onClick={() => setQuery(term)}

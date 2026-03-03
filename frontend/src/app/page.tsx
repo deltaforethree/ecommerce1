@@ -8,9 +8,9 @@ import NewsletterSection from "@/components/sections/NewsletterSection";
 import BrandValues from "@/components/sections/BrandValues";
 
 export const metadata: Metadata = {
-  title: "Raffine — Effortlessly Refined Clothing",
+  title: "Raffine — Luxury Indian Ethnic Wear & Heritage Fashion",
   description:
-    "Discover premium clothing crafted from the world's finest fabrics. Silk, cashmere, linen, and luxury knitwear.",
+    "Explore our collection of hand-woven Banarasi sarees, bridal lehengas, and designer ethnic wear for women. Experience the essence of Indian craftsmanship.",
 };
 
 export default function HomePage() {

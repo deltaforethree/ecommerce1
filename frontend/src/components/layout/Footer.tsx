@@ -5,9 +5,10 @@ import Link from "next/link";
 import { Instagram, Facebook, Twitter, Youtube } from "lucide-react";
 
 const shopLinks = [
-    { label: "Women", href: "/shop/women" },
-    { label: "Men", href: "/shop/men" },
-    { label: "Kids", href: "/shop/kids" },
+    { label: "Sarees", href: "/shop/sarees" },
+    { label: "Lehengas", href: "/shop/lehengas" },
+    { label: "Suits & Anarkalis", href: "/shop/suits" },
+    { label: "Kurtas", href: "/shop/kurtas" },
     { label: "Accessories", href: "/shop/accessories" },
     { label: "Sale", href: "/shop/sale" },
 ];

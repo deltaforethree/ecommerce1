@@ -8,12 +8,12 @@ import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   title: {
-    default: "Raffine — Effortlessly Refined Clothing",
+    default: "Raffine — Luxury Indian Ethnic Wear & Heritage Fashion",
     template: "%s | Raffine",
   },
   description:
-    "Discover premium clothing crafted from the world's finest fabrics. Silk, cashmere, linen, and luxury knitwear for women, men, and kids.",
-  keywords: ["luxury clothing", "premium fashion", "cashmere", "silk", "designer clothing", "Raffine"],
+    "Discover premium Indian ethnic wear, bridal lehengas, Banarasi sarees, and designer menswear. Raffine brings you the finest heritage craftsmanship.",
+  keywords: ["luxury indian wear", "heritage fashion", "bridal lehenga", "banarasi saree", "designer sherwani", "Raffine"],
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -21,16 +21,16 @@ export const metadata: Metadata = {
     siteName: "Raffine",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=1200&q=80",
+        url: "/images/hero/bridal-lehenga.png",
         width: 1200,
         height: 630,
-        alt: "Raffine — Effortlessly Refined Clothing",
+        alt: "Raffine — Luxury Indian Ethnic Wear",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    site: "@raffine",
+    site: "@raffine_luxury",
   },
 };
 

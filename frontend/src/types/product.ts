@@ -1,11 +1,12 @@
 export type ProductCategory =
-    | "men"
-    | "women"
-    | "kids"
+    | "sarees"
+    | "lehengas"
+    | "suits"
+    | "kurtas"
     | "accessories"
     | "sale";
 
-export type ProductSize = "XS" | "S" | "M" | "L" | "XL" | "XXL" | "One Size";
+export type ProductSize = "XS" | "S" | "M" | "L" | "XL" | "XXL" | "One Size" | "Free Size";
 
 export interface ProductColor {
     name: string;
